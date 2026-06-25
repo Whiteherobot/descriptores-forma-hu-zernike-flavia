@@ -1,0 +1,16 @@
+Coloca aquí el archivo "model.csv" entrenado.
+
+Cómo generarlo:
+  1. Coloca el Flavia Dataset real en  data/flavia/  (all.csv + imágenes).
+  2. Desde la raíz del proyecto ejecuta:
+        python -m scripts.run_part2
+     (o la CLI C++:  ./cpp/build/flavia_eval data/flavia model.csv )
+  3. Copia el archivo generado  results/part2/model.csv  a esta carpeta
+     (mobile/app/src/main/assets/model.csv).
+
+Formato de cada línea:  etiqueta,d0,d1,...,d31
+  - etiqueta: clase de la hoja (14..20)
+  - d0..d31 : descriptor de Fourier (coordenadas complejas) de esa hoja.
+
+La app carga este archivo al iniciar (assets/model.csv) y clasifica el dibujo
+comparándolo (distancia Euclídea, K=7) contra estos descriptores.

@@ -1,0 +1,18 @@
+// Ruta: mobile/settings.gradle
+// Responsabilidad: declarar repositorios y módulos del proyecto Android.
+pluginManagement {
+    repositories {
+        google()
+        mavenCentral()
+        gradlePluginPortal()
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()   // OpenCV oficial: org.opencv:opencv
+    }
+}
+rootProject.name = "FlaviaShapeSignature"
+include ':app'

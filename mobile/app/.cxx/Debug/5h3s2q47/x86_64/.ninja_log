@@ -1,0 +1,4 @@
+# ninja log v5
+0	857	1782349389058016487	CMakeFiles/flavia_native.dir/native_lib.cpp.o	d7308d74f529938a
+1	1147	1782349389346016495	CMakeFiles/flavia_native.dir/home/ing_michi/Documents/Vision_del_computador/vision_project/cpp/src/shape_descriptor.cpp.o	56721d7c130ed6f
+1147	1189	1782349389390016497	/home/ing_michi/Documents/Vision del computador/vision_project/mobile/app/build/intermediates/cxx/Debug/5h3s2q47/obj/x86_64/libflavia_native.so	a0eb97354968e841

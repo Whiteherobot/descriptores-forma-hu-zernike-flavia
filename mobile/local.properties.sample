@@ -1,0 +1,9 @@
+# Ruta: mobile/local.properties.sample
+# Copia este archivo como 'local.properties' y ajusta la ruta a tu equipo.
+# (local.properties NO debe subirse al control de versiones.)
+
+# SDK de Android (en este equipo):
+sdk.dir=/home/ing_michi/Android/Sdk
+
+# NOTA: OpenCV se resuelve automáticamente por Maven Central (org.opencv:opencv
+# con Prefab). NO necesitas descargar el OpenCV Android SDK ni definir opencv.dir.

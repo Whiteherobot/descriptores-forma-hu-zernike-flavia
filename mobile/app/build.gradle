@@ -1,0 +1,66 @@
+// Ruta: mobile/app/build.gradle  (módulo app)
+// Responsabilidad:
+//   Configurar la app Android: SDK, NDK + CMake (para compilar el núcleo C++
+//   nativo de la Parte 2 vía JNI) y la dependencia de OpenCV.
+//
+// OpenCV: se resuelve por Maven Central (org.opencv:opencv) que incluye PREFAB
+//   (headers + librerías nativas). No hace falta descargar el OpenCV Android SDK
+//   ni configurar OpenCV_DIR: 'buildFeatures.prefab true' expone OpenCV a CMake.
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'com.ups.vc.flavia'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.ups.vc.flavia"
+        minSdk 24
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
+
+        externalNativeBuild {
+            cmake {
+                cppFlags '-std=c++17 -frtti -fexceptions'
+                // OpenCV (prefab opencv_java4) exige STL COMPARTIDA.
+                arguments "-DANDROID_STL=c++_shared"
+            }
+        }
+        // ABIs disponibles en el AAR de OpenCV (físicos + emulador x86_64).
+        ndk { abiFilters 'arm64-v8a', 'armeabi-v7a', 'x86_64' }
+    }
+
+    // Habilita Prefab para que CMake encuentre OpenCV desde el AAR.
+    buildFeatures {
+        prefab true
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    externalNativeBuild {
+        cmake {
+            path 'src/main/cpp/CMakeLists.txt'
+            version '3.22.1'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+}
+
+dependencies {
+    // OpenCV para Android (capa Java). Opción A: módulo local ':sdk' importado
+    // desde el OpenCV-android-sdk. Opción B (recomendada si está disponible):
+    // el AAR oficial de Maven Central.
+    implementation 'org.opencv:opencv:4.11.0'
+    implementation 'androidx.appcompat:appcompat:1.7.0'
+}

@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# C++ build
+cpp/build/
+
+# Android
+mobile/local.properties
+mobile/.gradle/
+mobile/build/
+mobile/app/build/
+mobile/.idea/
+*.iml
+
+# Datos pesados (no versionar el dataset Flavia)
+data/flavia/*.jpg
+data/flavia/images/

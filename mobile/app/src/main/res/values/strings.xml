@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Ruta: mobile/app/src/main/res/values/strings.xml -->
+<resources>
+    <string name="app_name">Flavia ShapeSignature</string>
+    <string name="title">Reconocimiento de hojas — Shape Signature (FFT)</string>
+    <string name="hint">Dibuja una hoja y pulsa \"Clasificar forma\".</string>
+    <string name="classify">Clasificar forma</string>
+    <string name="clear">Limpiar</string>
+</resources>

@@ -1,0 +1,7 @@
+{
+  "enabled": true,
+  "prefabPath": "/home/ing_michi/.gradle/caches/modules-2/files-2.1/com.google.prefab/cli/2.1.0/aa32fec809c44fa531f01dcfb739b5b3304d3050/cli-2.1.0-all.jar",
+  "packages": [
+    "/home/ing_michi/.gradle/caches/transforms-4/cb12912c993d18f5db48d2f81d4ee35b/transformed/opencv-4.11.0/prefab"
+  ]
+}

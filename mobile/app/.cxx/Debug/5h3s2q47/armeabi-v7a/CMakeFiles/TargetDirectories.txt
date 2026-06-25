@@ -1,0 +1,3 @@
+/home/ing_michi/Documents/Vision del computador/vision_project/mobile/app/.cxx/Debug/5h3s2q47/armeabi-v7a/CMakeFiles/flavia_native.dir
+/home/ing_michi/Documents/Vision del computador/vision_project/mobile/app/.cxx/Debug/5h3s2q47/armeabi-v7a/CMakeFiles/edit_cache.dir
+/home/ing_michi/Documents/Vision del computador/vision_project/mobile/app/.cxx/Debug/5h3s2q47/armeabi-v7a/CMakeFiles/rebuild_cache.dir

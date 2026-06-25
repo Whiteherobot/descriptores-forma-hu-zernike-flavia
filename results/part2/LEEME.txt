@@ -1,0 +1,12 @@
+Resultados Parte 2 (Flavia real, clases G3: 14-20)
+
+- Accuracy (test 20%): 93.5 % (Python y C++ idénticos)
+- confusion_matrix_part2.png : matriz de confusión de las clases 14-20.
+- hojas_confundidas.png      : ejemplos gráficos de formas que el sistema confunde
+                               (hojas lanceoladas casi idénticas: 14/15/18).
+- model.csv                  : descriptores de entrenamiento (80% por clase),
+                               empaquetado también en mobile/app/src/main/assets/.
+
+Generado con: python -m scripts.run_part2
+App Android validada en dispositivo real (tablet 9185W): dibujo -> "Clasificar
+forma" -> "ESPECIE CLASIFICADA: N".

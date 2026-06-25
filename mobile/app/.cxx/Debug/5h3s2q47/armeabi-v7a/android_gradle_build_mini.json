@@ -1,0 +1,29 @@
+{
+  "buildFiles": [
+    "/home/ing_michi/Documents/Vision del computador/vision_project/mobile/app/src/main/cpp/CMakeLists.txt"
+  ],
+  "cleanCommandsComponents": [
+    [
+      "/home/ing_michi/Android/Sdk/cmake/3.22.1/bin/ninja",
+      "-C",
+      "/home/ing_michi/Documents/Vision del computador/vision_project/mobile/app/.cxx/Debug/5h3s2q47/armeabi-v7a",
+      "clean"
+    ]
+  ],
+  "buildTargetsCommandComponents": [
+    "/home/ing_michi/Android/Sdk/cmake/3.22.1/bin/ninja",
+    "-C",
+    "/home/ing_michi/Documents/Vision del computador/vision_project/mobile/app/.cxx/Debug/5h3s2q47/armeabi-v7a",
+    "{LIST_OF_TARGETS_TO_BUILD}"
+  ],
+  "libraries": {
+    "flavia_native::@6890427a1f51a3e7e1df": {
+      "artifactName": "flavia_native",
+      "abi": "armeabi-v7a",
+      "output": "/home/ing_michi/Documents/Vision del computador/vision_project/mobile/app/build/intermediates/cxx/Debug/5h3s2q47/obj/armeabi-v7a/libflavia_native.so",
+      "runtimeFiles": [
+        "/home/ing_michi/.gradle/caches/transforms-4/cb12912c993d18f5db48d2f81d4ee35b/transformed/opencv-4.11.0/prefab/modules/opencv_java4/libs/android.armeabi-v7a/libopencv_java4.so"
+      ]
+    }
+  }
+}
