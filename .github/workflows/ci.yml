@@ -1,0 +1,28 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  cpp:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v5
+      - run: sudo apt-get update -qq && sudo apt-get install -y -qq libopencv-dev
+      - run: cmake -S cpp -B build -DCMAKE_BUILD_TYPE=Release && cmake --build build -j4
+      - name: Autoprueba del descriptor (invarianza y clasificación con formas sintéticas)
+        run: ./build/selftest
+
+  parte1:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.11"
+          cache: pip
+      - run: pip install -r requirements.txt
+      - name: Parte 1 en modo rápido
+        run: python -m scripts.run_part1
