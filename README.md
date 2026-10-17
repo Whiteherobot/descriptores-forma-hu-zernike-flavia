@@ -1,10 +1,14 @@
-# Visión por Computador — Práctica 3.1 / 3.2
+# descriptores-forma-hu-zernike-flavia
+
+[![CI](https://github.com/Whiteherobot/descriptores-forma-hu-zernike-flavia/actions/workflows/ci.yml/badge.svg)](https://github.com/Whiteherobot/descriptores-forma-hu-zernike-flavia/actions/workflows/ci.yml)
+
+Visión por Computador — Práctica 3.1 / 3.2 (Universidad Politécnica Salesiana, junio de 2026).
 
 **Análisis comparativo de robustez (Hu vs Zernike vs Shape Signature)** y
 **reconocimiento de hojas con Firma Espectral (FFT de coordenadas complejas)**.
 
 - **Universidad Politécnica Salesiana** · Docente: Ing. Vladimir Robles Bykbaev
-- **Estudiante:** Lata Zambrano Michael Israel — **Grupo G3**
+- **Autores:** Michael Lata y Jordy Romero — **Grupo G3**
 - **Clases asignadas (Flavia, Tabla 2):** `14, 15, 16, 17, 18, 19, 20`
 - **Parámetros personalizados (pista):** umbral **T = 130**, KNN **K = 7**
 - Restricción: **ML clásico** (OpenCV / NumPy / scikit-learn). **Sin Deep Learning.**
@@ -87,3 +91,29 @@ ruido), PCA y `summary.json`. El cuaderno equivalente está en `notebooks/`.
   las únicas confusiones (6) son entre especies lanceoladas casi idénticas (14↔15).
 
 Detalle en `reports/`.
+
+---
+
+## Datos
+
+- **UPS-Writing-Skills** (Parte 1, incluido en `data/ups_writing_skills/`):
+  [adolfogavilanes/ups-writing-skills](https://www.kaggle.com/datasets/adolfogavilanes/ups-writing-skills),
+  licencia Apache 2.0.
+- **Flavia** (Parte 2, no incluido): se descarga con
+  `kagglehub.dataset_download("gauravneupane/flavia-dataset")` y se enlaza en
+  `data/flavia/`. El dataset no declara licencia, por eso no está en el repo.
+
+El núcleo C++ y la app Android usan **OpenCV 4** (en OpenCV 5 `contourArea` y
+otras funciones pasaron al módulo `geometry`). La CI compila el núcleo, corre su
+autoprueba y ejecuta la Parte 1 en modo rápido.
+
+En 2026 se ordenó el repositorio (antes `Practica3-VisionComputador-Hu-Zernike-Flavia`):
+se quitaron los compilados de Android Studio, se agregaron el cuaderno
+autónomo para Kaggle, el informe actualizado, la licencia y la CI.
+
+## Autores
+
+- Michael Lata ([@Whiteherobot](https://github.com/Whiteherobot))
+- Jordy Romero ([@JordyRomeroa](https://github.com/JordyRomeroa))
+
+Licencia MIT.
