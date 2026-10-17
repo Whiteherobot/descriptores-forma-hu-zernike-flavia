@@ -1,7 +1,7 @@
 # Dependencias de la Parte 1 (Python). Probado con Python 3.11 / venv cv-ai311.
 # Machine Learning CLÁSICO únicamente (sin Deep Learning).
 numpy>=1.26
-opencv-python>=4.9
+opencv-python>=4.9,<5   # OpenCV 5 reorganizó módulos (contourArea pasó a geometry)
 scikit-learn>=1.4
 scipy>=1.11
 matplotlib>=3.8
