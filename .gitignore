@@ -17,3 +17,15 @@ mobile/.idea/
 # Datos pesados (no versionar el dataset Flavia)
 data/flavia/*.jpg
 data/flavia/images/
+
+# Compilados de CMake de Android Studio
+mobile/app/.cxx/
+
+# Material del docente y apuntes personales
+teoria/
+
+# Auxiliares de LaTeX
+informe/*.aux
+informe/*.log
+informe/*.out
+informe/*.toc
